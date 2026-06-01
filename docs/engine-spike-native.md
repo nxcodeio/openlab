@@ -166,7 +166,42 @@ The numbers are decisive:
 3. **MCP SDK integration** — wire the spike's execute/wrapped/sentinel pattern into `@modelcontextprotocol/sdk` tool handlers. Maybe 1 day of work.
 4. **Large output handling** — base64-encoded large PNGs (>100 KB) may bloat MCP responses. Consider: cap at 100 KB or write to tempdir + return file path. Defer until v0.2.1 if response sizes are not an issue at launch.
 
+## Licensing analysis (MCP path)
+
+OpenLab repo is **MIT**. GNU Octave is **GPLv3**. The MCP server `spawn()`s `octave-cli` as a subprocess. Does that make OpenLab subject to GPL?
+
+**No.** Per the FSF's own GPL FAQ ([Mere Aggregation](https://www.gnu.org/licenses/gpl-faq.html#MereAggregation), [communicating at arm's length](https://www.gnu.org/licenses/gpl-faq.html#GPLPlugins)):
+
+> "Where's the line between two separate programs, and one program with two parts? This is a legal question, which ultimately judges will decide. We believe that a proper criterion depends both on the mechanism of communication (exec, pipes, rpc, function calls within a shared address space, etc.) and the semantics of the communication (what kinds of information are interchanged). **If the modules are included in the same executable file, they are definitely combined in one program. If modules are designed to run linked together in a shared address space, that almost certainly means combining them into one program. By contrast, pipes, sockets and command-line arguments are communication mechanisms normally used between two separate programs.** So when they are used for communication, the modules normally are separate programs."
+
+OpenLab's MCP server matches the safe pattern:
+- **Communication mechanism**: `child_process.spawn('octave-cli', [...])` → stdin/stdout pipes
+- **Semantics**: command/response (MATLAB code in, stdout/stderr/figures out) — arm's length
+- **No shared address space**, no dynamic linking, no GPL code copied into OpenLab source
+
+**We never distribute Octave.** User installs Octave via their own package manager (`brew install octave`, `apt install octave`, Windows installer from octave.org). The MCP server's package on npm contains zero GPL code — only our MIT-licensed wrapper that spawns whatever `octave-cli` the user has.
+
+This is the standard pattern used by countless MIT/Apache projects that call out to GPL tools (every Node.js project that shells out to `git`, every web app that runs `gcc` for code compilation, every MCP server that wraps system utilities). Not a novel legal position.
+
+**What WOULD trigger GPL obligations**:
+- Bundling Octave binary inside `@openlab/mcp-server` npm package → distribution, GPL applies → would need to offer source + ship under GPL-compatible license
+- Statically linking against any of Octave's libraries (`liboctave.so`, etc.) → derivative work
+- Copying Octave source code (or .m files from Octave's standard library) into OpenLab repo → derivative work
+
+**None of these are in scope for v0.2.** The MCP server is pure MIT, calling user-installed Octave at arm's length.
+
+**Plot fidelity preset** (`packages/mcp-server/matlab-compat-preset.m`): our original .m script that calls Octave's `set()` API. User scripts that consume Octave APIs are not derivative of Octave (otherwise every MATLAB user's homework would be GPL — clearly not the case). MIT.
+
+**Octave Forge packages** (signal, control) used in Tier-2 testing: also GPLv3, also user-installed via `pkg install -forge`. We don't redistribute, no obligation transfer.
+
+**Spike artifacts in this repo**:
+- `docs/spike-mcp/spike.mjs` — original Node.js code, MIT (matches OpenLab repo license)
+- `docs/spike-mcp/spike-result.json` — generated test report data, MIT (our content)
+- `docs/spike-fidelity/render.m` — original .m script, MIT
+- `docs/spike-fidelity/octave/*.png` — rendered BY Octave but OUTPUT of a GPL tool is not GPL-encumbered (canonical example: Bison-generated parsers are not GPL). PNGs are MIT/our content.
+
 ## Decision log
 
 - **GO** for v0.2 MCP server: 2026-06-01
 - **v0.2 launch ships with native Octave via subprocess**, not WASM in browser (see `engine-spike-wasm.md` for that finding)
+- **License posture for v0.2: pure MIT, zero GPL distribution.** GPL obligations only return in v0.3 if/when we ship Octave WASM blob in browser (already planned: LICENSES/NOTICE/attribution).
