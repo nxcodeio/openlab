@@ -6,6 +6,8 @@ OpenLab is what MATLAB would look like if it were built in 2026. Open it in a ta
 
 No 3 GB install. No license server. No lag.
 
+> **Sister project**: [`openlab-style`](https://github.com/nxcodeio/openlab-style) — a Python pip package that styles matplotlib to look like MATLAB. Use it when you want your AI assistant's plots to *look* like MATLAB. Use OpenLab (this repo) when you need your AI to actually *run* MATLAB code.
+
 ## Why
 
 MATLAB is the lingua franca of engineering education and a lot of industrial R&D — but the product is 40 years old and shows it. It costs $2k+ a year, takes 30 seconds to launch, and the IDE looks like it's from 2005. Free alternatives (GNU Octave, Scilab) are syntax-compatible but technically and visually decades behind.
