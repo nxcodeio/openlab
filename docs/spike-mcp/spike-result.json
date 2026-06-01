@@ -1,0 +1,377 @@
+{
+  "octaveVersion": "11.1.0",
+  "octaveBin": "octave-cli",
+  "platform": "darwin",
+  "arch": "arm64",
+  "initMs": 273.283042,
+  "results": [
+    {
+      "tier": "TIER 1 (core)",
+      "name": "fft",
+      "status": "PASS",
+      "durationMs": 29.44304199999999,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "ifft",
+      "status": "PASS",
+      "durationMs": 28.396833000000015,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "abs",
+      "status": "PASS",
+      "durationMs": 28.69662500000004,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "angle",
+      "status": "PASS",
+      "durationMs": 27.63095899999996,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "real",
+      "status": "PASS",
+      "durationMs": 29.07937499999997,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "imag",
+      "status": "PASS",
+      "durationMs": 28.35062499999998,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "conv",
+      "status": "PASS",
+      "durationMs": 29.654750000000035,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "zeros",
+      "status": "PASS",
+      "durationMs": 27.476459000000034,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "ones",
+      "status": "PASS",
+      "durationMs": 27.31645800000001,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "eye",
+      "status": "PASS",
+      "durationMs": 28.488917000000015,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "linspace",
+      "status": "PASS",
+      "durationMs": 27.918999999999983,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "logspace",
+      "status": "PASS",
+      "durationMs": 29.519667000000027,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "plot",
+      "status": "PASS",
+      "durationMs": 634.1926249999999,
+      "figures": 1,
+      "stderr": "\n"
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "subplot",
+      "status": "PASS",
+      "durationMs": 476.44937500000015,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "semilogx",
+      "status": "PASS",
+      "durationMs": 393.19662500000004,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "semilogy",
+      "status": "PASS",
+      "durationMs": 393.03774999999996,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "loglog",
+      "status": "PASS",
+      "durationMs": 388.6755000000003,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "mesh",
+      "status": "PASS",
+      "durationMs": 400.7329999999997,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "surf",
+      "status": "PASS",
+      "durationMs": 395.18483400000014,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "eig",
+      "status": "PASS",
+      "durationMs": 29.314041999999972,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "inv",
+      "status": "PASS",
+      "durationMs": 28.309541999999965,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "det",
+      "status": "PASS",
+      "durationMs": 28.563292000000274,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "svd",
+      "status": "PASS",
+      "durationMs": 28.433458999999857,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "pinv",
+      "status": "PASS",
+      "durationMs": 28.324583000000075,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "mean",
+      "status": "PASS",
+      "durationMs": 30.764708999999584,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "std",
+      "status": "PASS",
+      "durationMs": 29.988208000000213,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "var",
+      "status": "PASS",
+      "durationMs": 28.9145410000001,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "sum",
+      "status": "PASS",
+      "durationMs": 28.378541999999925,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "prod",
+      "status": "PASS",
+      "durationMs": 28.871332999999595,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "sort",
+      "status": "PASS",
+      "durationMs": 29.06579200000033,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "find",
+      "status": "PASS",
+      "durationMs": 27.902000000000044,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "length",
+      "status": "PASS",
+      "durationMs": 27.721250000000055,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "size",
+      "status": "PASS",
+      "durationMs": 27.438333000000057,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "reshape",
+      "status": "PASS",
+      "durationMs": 27.487500000000182,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "repmat",
+      "status": "PASS",
+      "durationMs": 31.35966600000029,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 1 (core)",
+      "name": "hist",
+      "status": "PASS",
+      "durationMs": 29.134749999999258,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "filter",
+      "status": "PASS",
+      "durationMs": 27.907624999999825,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "freqz",
+      "status": "PASS",
+      "durationMs": 28.32429200000024,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "butter",
+      "status": "PASS",
+      "durationMs": 59.14008399999966,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "cheby1",
+      "status": "PASS",
+      "durationMs": 42.36183399999936,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "bode",
+      "status": "PASS",
+      "durationMs": 652.7234579999995,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "step",
+      "status": "PASS",
+      "durationMs": 455.86670799999956,
+      "figures": 1,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "tf",
+      "status": "PASS",
+      "durationMs": 43.489166000000296,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "ss",
+      "status": "PASS",
+      "durationMs": 42.01312499999949,
+      "figures": 0,
+      "stderr": ""
+    },
+    {
+      "tier": "TIER 2 (toolbox)",
+      "name": "lsim",
+      "status": "PASS",
+      "durationMs": 46.239958999999544,
+      "figures": 0,
+      "stderr": ""
+    }
+  ],
+  "summary": {
+    "tier1Pass": 36,
+    "tier1Total": 36,
+    "tier2Pass": 9,
+    "tier2Total": 9,
+    "figureCount": 9
+  },
+  "timestamp": "2026-06-01T04:19:18.001Z"
+}

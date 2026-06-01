@@ -10,3 +10,6 @@ dist/
 .env
 .env.local
 .env.*.local
+
+# octave-cli writes this on exit
+octave-workspace
